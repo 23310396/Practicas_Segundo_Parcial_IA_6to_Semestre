@@ -1,0 +1,776 @@
+{
+  "part_shapes": [
+    [
+      68024,
+      17
+    ],
+    [
+      82625,
+      17
+    ],
+    [
+      71526,
+      17
+    ]
+  ],
+  "initial_shape": [
+    222175,
+    17
+  ],
+  "initial_dtypes": {
+    "funded_amount": "int64",
+    "term": "str",
+    "interest_rate": "float64",
+    "installment": "float64",
+    "grade": "str",
+    "sub_grade": "str",
+    "employment_length": "str",
+    "home_ownership": "str",
+    "annual_income": "float64",
+    "verification_status": "str",
+    "loan_status": "str",
+    "payment_plan": "str",
+    "purpose": "str",
+    "zip_code": "str",
+    "address_state": "str",
+    "earliest_credit_line": "str",
+    "issue_date": "str"
+  },
+  "initial_nulls": {
+    "employment_length": 9156,
+    "annual_income": 4,
+    "earliest_credit_line": 29
+  },
+  "describe_numeric": {
+    "funded_amount": {
+      "count": 222175.0,
+      "mean": 13412.351187,
+      "std": 8026.038486,
+      "min": 500.0,
+      "25%": 7200.0,
+      "50%": 12000.0,
+      "75%": 18000.0,
+      "max": 35000.0
+    },
+    "interest_rate": {
+      "count": 222175.0,
+      "mean": 13.786885,
+      "std": 4.410498,
+      "min": 5.42,
+      "25%": 10.74,
+      "50%": 13.61,
+      "75%": 16.49,
+      "max": 26.06
+    },
+    "installment": {
+      "count": 222175.0,
+      "mean": 416.09361,
+      "std": 243.245556,
+      "min": 15.67,
+      "25%": 238.3,
+      "50%": 365.12,
+      "75%": 544.575,
+      "max": 1408.13
+    },
+    "annual_income": {
+      "count": 222171.0,
+      "mean": 72089.878248,
+      "std": 55795.753644,
+      "min": 1896.0,
+      "25%": 45000.0,
+      "50%": 62000.0,
+      "75%": 86000.0,
+      "max": 7141778.0
+    }
+  },
+  "head": [
+    {
+      "funded_amount": 5000,
+      "term": " 36 months",
+      "interest_rate": 10.65,
+      "installment": 162.87,
+      "grade": "B",
+      "sub_grade": "B2",
+      "employment_length": "10+ years",
+      "home_ownership": "RENT",
+      "annual_income": 24000.0,
+      "verification_status": "Verified",
+      "loan_status": "Fully Paid",
+      "payment_plan": "n",
+      "purpose": "credit_card",
+      "zip_code": "860xx",
+      "address_state": "AZ",
+      "earliest_credit_line": "Jan-85",
+      "issue_date": "Dec-11"
+    },
+    {
+      "funded_amount": 2500,
+      "term": " 60 months",
+      "interest_rate": 15.27,
+      "installment": 59.83,
+      "grade": "C",
+      "sub_grade": "C4",
+      "employment_length": "< 1 year",
+      "home_ownership": "RENT",
+      "annual_income": 30000.0,
+      "verification_status": "Source Verified",
+      "loan_status": "Charged Off",
+      "payment_plan": "n",
+      "purpose": "car",
+      "zip_code": "309xx",
+      "address_state": "GA",
+      "earliest_credit_line": "Apr-99",
+      "issue_date": "Dec-11"
+    },
+    {
+      "funded_amount": 2400,
+      "term": " 36 months",
+      "interest_rate": 15.96,
+      "installment": 84.33,
+      "grade": "C",
+      "sub_grade": "C5",
+      "employment_length": "10+ years",
+      "home_ownership": "RENT",
+      "annual_income": 12252.0,
+      "verification_status": "Not Verified",
+      "loan_status": "Fully Paid",
+      "payment_plan": "n",
+      "purpose": "small_business",
+      "zip_code": "606xx",
+      "address_state": "IL",
+      "earliest_credit_line": "Nov-01",
+      "issue_date": "Dec-11"
+    },
+    {
+      "funded_amount": 5000,
+      "term": " 36 months",
+      "interest_rate": 7.9,
+      "installment": 156.46,
+      "grade": "A",
+      "sub_grade": "A4",
+      "employment_length": "3 years",
+      "home_ownership": "RENT",
+      "annual_income": 36000.0,
+      "verification_status": "Source Verified",
+      "loan_status": "Fully Paid",
+      "payment_plan": "n",
+      "purpose": "wedding",
+      "zip_code": "852xx",
+      "address_state": "AZ",
+      "earliest_credit_line": "Nov-04",
+      "issue_date": "Dec-11"
+    },
+    {
+      "funded_amount": 3000,
+      "term": " 36 months",
+      "interest_rate": 18.64,
+      "installment": 109.43,
+      "grade": "E",
+      "sub_grade": "E1",
+      "employment_length": "9 years",
+      "home_ownership": "RENT",
+      "annual_income": 48000.0,
+      "verification_status": "Source Verified",
+      "loan_status": "Fully Paid",
+      "payment_plan": "n",
+      "purpose": "car",
+      "zip_code": "900xx",
+      "address_state": "CA",
+      "earliest_credit_line": "Jan-07",
+      "issue_date": "Dec-11"
+    }
+  ],
+  "cleaning": {
+    "impute_values": {
+      "annual_income": 62000.0,
+      "employment_length_num": 6.0,
+      "credit_history_years": 13.83709787816564,
+      "term_months": 36.0,
+      "interest_rate": 13.61,
+      "installment": 365.12
+    },
+    "final_shape_raw": [
+      222175,
+      118
+    ],
+    "final_shape_scaled": [
+      222175,
+      118
+    ],
+    "feature_count_classification": 116,
+    "remaining_nulls": 0
+  },
+  "eda": {
+    "success_counts": {
+      "0": 35694,
+      "1": 186481
+    },
+    "success_rate": 0.839342860357826,
+    "funded_amount_stats": {
+      "count": 222175.0,
+      "mean": 13412.351187127264,
+      "std": 8026.038486188685,
+      "min": 500.0,
+      "25%": 7200.0,
+      "50%": 12000.0,
+      "75%": 18000.0,
+      "max": 35000.0
+    },
+    "annual_income_stats": {
+      "count": 222175.0,
+      "mean": 72089.69659183077,
+      "std": 55795.2677957411,
+      "min": 1896.0,
+      "25%": 45000.0,
+      "50%": 62000.0,
+      "75%": 86000.0,
+      "max": 7141778.0
+    },
+    "annual_income_funded_amount_corr": 0.3453008875413683,
+    "term_success_rates": [
+      {
+        "term_months": 36,
+        "count": 173967,
+        "success_rate": 0.878534434691637
+      },
+      {
+        "term_months": 60,
+        "count": 48208,
+        "success_rate": 0.6979132094258215
+      }
+    ],
+    "hist_counts": [
+      3228,
+      9490,
+      9719,
+      21796,
+      12477,
+      15559,
+      26722,
+      9137,
+      17180,
+      9177,
+      15417,
+      10387,
+      8354,
+      4497,
+      14215,
+      3529,
+      2258,
+      10074,
+      1621,
+      3644,
+      1057,
+      3848,
+      1079,
+      833,
+      6877
+    ],
+    "hist_edges": [
+      500.0,
+      1880.0,
+      3260.0,
+      4640.0,
+      6020.0,
+      7400.0,
+      8780.0,
+      10160.0,
+      11540.0,
+      12920.0,
+      14300.0,
+      15680.0,
+      17060.0,
+      18440.0,
+      19820.0,
+      21200.0,
+      22580.0,
+      23960.0,
+      25340.0,
+      26720.0,
+      28100.0,
+      29480.0,
+      30860.0,
+      32240.0,
+      33620.0,
+      35000.0
+    ]
+  },
+  "regression": {
+    "simple": {
+      "coef_annual_income": 0.047560792790585574,
+      "intercept": 9965.880700614416,
+      "mse": 55866885.0765958,
+      "r2": 0.14056775287189105,
+      "train_n": 177740,
+      "test_n": 44435
+    },
+    "multivariable": {
+      "intercept": -6776.738879682898,
+      "mse": 891532.144774174,
+      "r2": 0.986285051090289,
+      "train_n": 177740,
+      "test_n": 44435,
+      "top_coefficients": [
+        {
+          "feature": "grade_G",
+          "coefficient": -401.36621566084085
+        },
+        {
+          "feature": "grade_C",
+          "coefficient": 273.42205416033414
+        },
+        {
+          "feature": "grade_D",
+          "coefficient": 231.9395409798114
+        },
+        {
+          "feature": "term_months",
+          "coefficient": 231.53627584613838
+        },
+        {
+          "feature": "grade_B",
+          "coefficient": 212.58867991112
+        },
+        {
+          "feature": "sub_grade_A5",
+          "coefficient": 198.6526419349782
+        },
+        {
+          "feature": "grade_F",
+          "coefficient": -193.71734182653012
+        },
+        {
+          "feature": "sub_grade_F5",
+          "coefficient": -186.79338772594323
+        },
+        {
+          "feature": "sub_grade_A4",
+          "coefficient": 185.36158832569168
+        },
+        {
+          "feature": "interest_rate",
+          "coefficient": -180.37008744940061
+        },
+        {
+          "feature": "sub_grade_A3",
+          "coefficient": 178.86053912917674
+        },
+        {
+          "feature": "sub_grade_F1",
+          "coefficient": 176.70086053513612
+        },
+        {
+          "feature": "sub_grade_F4",
+          "coefficient": -157.3002171649879
+        },
+        {
+          "feature": "sub_grade_G1",
+          "coefficient": -152.2913565288012
+        },
+        {
+          "feature": "sub_grade_D1",
+          "coefficient": 146.84098246961446
+        },
+        {
+          "feature": "sub_grade_C5",
+          "coefficient": 121.45608290159376
+        },
+        {
+          "feature": "sub_grade_A2",
+          "coefficient": 121.39060237585919
+        },
+        {
+          "feature": "purpose_small_business",
+          "coefficient": -120.63423720194163
+        },
+        {
+          "feature": "purpose_moving",
+          "coefficient": 117.6890112786619
+        },
+        {
+          "feature": "purpose_vacation",
+          "coefficient": 110.01808779502
+        }
+      ]
+    }
+  },
+  "classification_split": {
+    "train_shape": [
+      155522,
+      116
+    ],
+    "test_shape": [
+      66653,
+      116
+    ],
+    "train_success_rate": 0.8393410578567663,
+    "test_success_rate": 0.8393470661485605,
+    "cv": "RepeatedKFold(n_splits=3, n_repeats=1, random_state=42)"
+  },
+  "classification": {
+    "Logistic Regression": {
+      "accuracy": 0.8403372691401737,
+      "precision": 0.843615843206262,
+      "recall": 0.9940477254446332,
+      "f1": 0.9126745769944037,
+      "confusion_matrix": [
+        [
+          399,
+          10309
+        ],
+        [
+          333,
+          55612
+        ]
+      ],
+      "negative_recall": 0.037261860291370935,
+      "top_positive_coefficients": [
+        {
+          "feature": "annual_income",
+          "coefficient": 17.60635995759812
+        },
+        {
+          "feature": "home_ownership_NONE",
+          "coefficient": 1.2608029996774086
+        },
+        {
+          "feature": "home_ownership_MORTGAGE",
+          "coefficient": 0.7486001489795915
+        },
+        {
+          "feature": "home_ownership_OTHER",
+          "coefficient": 0.5539503164019957
+        },
+        {
+          "feature": "address_state_DC",
+          "coefficient": 0.535849720704761
+        },
+        {
+          "feature": "home_ownership_OWN",
+          "coefficient": 0.5064573529826244
+        },
+        {
+          "feature": "home_ownership_RENT",
+          "coefficient": 0.42893071369919905
+        },
+        {
+          "feature": "purpose_wedding",
+          "coefficient": 0.23617217247190717
+        },
+        {
+          "feature": "address_state_ME",
+          "coefficient": 0.19783124983673617
+        },
+        {
+          "feature": "address_state_WY",
+          "coefficient": 0.17047426050541928
+        }
+      ],
+      "top_negative_coefficients": [
+        {
+          "feature": "interest_rate",
+          "coefficient": -1.449298838362175
+        },
+        {
+          "feature": "address_state_NE",
+          "coefficient": -1.376058746202885
+        },
+        {
+          "feature": "grade_G",
+          "coefficient": -1.3545530551157774
+        },
+        {
+          "feature": "grade_F",
+          "coefficient": -1.3393085524184352
+        },
+        {
+          "feature": "grade_E",
+          "coefficient": -1.335167685648107
+        },
+        {
+          "feature": "grade_D",
+          "coefficient": -1.2084723496698484
+        },
+        {
+          "feature": "grade_C",
+          "coefficient": -1.0358697290826566
+        },
+        {
+          "feature": "payment_plan_y",
+          "coefficient": -0.8847416108550057
+        },
+        {
+          "feature": "purpose_small_business",
+          "coefficient": -0.7595060281923824
+        },
+        {
+          "feature": "grade_B",
+          "coefficient": -0.7432760286392017
+        }
+      ]
+    },
+    "Decision Tree": {
+      "accuracy": 0.8405173060477398,
+      "precision": 0.844522162244355,
+      "recall": 0.9927607471623916,
+      "f1": 0.9126612439405143,
+      "confusion_matrix": [
+        [
+          483,
+          10225
+        ],
+        [
+          405,
+          55540
+        ]
+      ],
+      "negative_recall": 0.045106462457975345
+    },
+    "Random Forest Optimized": {
+      "accuracy": 0.8398571707199975,
+      "precision": 0.8403578678294865,
+      "recall": 0.9989811421932255,
+      "f1": 0.9128297264189466,
+      "confusion_matrix": [
+        [
+          91,
+          10617
+        ],
+        [
+          57,
+          55888
+        ]
+      ],
+      "negative_recall": 0.008498319013821441,
+      "best_params": {
+        "n_estimators": 150,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_depth": 12,
+        "class_weight": null
+      },
+      "best_cv_f1": 0.9128217398625603
+    },
+    "MLP Optimized": {
+      "accuracy": 0.8391370230897334,
+      "precision": 0.8455777842307163,
+      "recall": 0.9889534364107606,
+      "f1": 0.9116629317163195,
+      "confusion_matrix": [
+        [
+          604,
+          10104
+        ],
+        [
+          618,
+          55327
+        ]
+      ],
+      "negative_recall": 0.056406425102726934,
+      "best_params": {
+        "solver": "adam",
+        "max_iter": 160,
+        "learning_rate_init": 0.003,
+        "hidden_layer_sizes": [
+          40
+        ],
+        "alpha": 0.01,
+        "activation": "relu"
+      },
+      "best_cv_f1": 0.9122490581858633,
+      "n_iter_": 18
+    }
+  },
+  "shap": {
+    "global": [
+      {
+        "feature": "interest_rate",
+        "mean_abs_shap": 0.031246128905202637
+      },
+      {
+        "feature": "term_months",
+        "mean_abs_shap": 0.02255756427661317
+      },
+      {
+        "feature": "annual_income",
+        "mean_abs_shap": 0.019771024135338332
+      },
+      {
+        "feature": "grade_B",
+        "mean_abs_shap": 0.007551302172367764
+      },
+      {
+        "feature": "grade_E",
+        "mean_abs_shap": 0.007539159935712209
+      },
+      {
+        "feature": "grade_D",
+        "mean_abs_shap": 0.007130219952469397
+      },
+      {
+        "feature": "installment",
+        "mean_abs_shap": 0.006095531011806861
+      },
+      {
+        "feature": "grade_F",
+        "mean_abs_shap": 0.004988030290064428
+      },
+      {
+        "feature": "home_ownership_MORTGAGE",
+        "mean_abs_shap": 0.0048470209856275055
+      },
+      {
+        "feature": "grade_C",
+        "mean_abs_shap": 0.003863422655772814
+      },
+      {
+        "feature": "home_ownership_RENT",
+        "mean_abs_shap": 0.00323208937104699
+      },
+      {
+        "feature": "verification_status_Verified",
+        "mean_abs_shap": 0.0031265123165705113
+      },
+      {
+        "feature": "sub_grade_A4",
+        "mean_abs_shap": 0.002055353273476935
+      },
+      {
+        "feature": "grade_G",
+        "mean_abs_shap": 0.001579557635989223
+      },
+      {
+        "feature": "employment_length_num",
+        "mean_abs_shap": 0.0015384421499692645
+      },
+      {
+        "feature": "verification_status_Source Verified",
+        "mean_abs_shap": 0.001345580322515439
+      },
+      {
+        "feature": "sub_grade_A5",
+        "mean_abs_shap": 0.0012816326568401027
+      },
+      {
+        "feature": "sub_grade_A3",
+        "mean_abs_shap": 0.001192754575586107
+      },
+      {
+        "feature": "sub_grade_A2",
+        "mean_abs_shap": 0.0010840262800405859
+      },
+      {
+        "feature": "credit_history_years",
+        "mean_abs_shap": 0.001063100651510916
+      }
+    ],
+    "local": {
+      "base_value": 0.8393128517723107,
+      "predicted_probability": 0.7656158242087384,
+      "predicted_class": 1,
+      "actual_class": 0,
+      "contributions": [
+        {
+          "feature": "term_months",
+          "feature_value": 1.0,
+          "shap_value": -0.056752487946662385
+        },
+        {
+          "feature": "annual_income",
+          "feature_value": 0.006037074562296687,
+          "shap_value": -0.03313522113443182
+        },
+        {
+          "feature": "interest_rate",
+          "feature_value": 0.4384689922480621,
+          "shap_value": 0.014370769499878287
+        },
+        {
+          "feature": "grade_B",
+          "feature_value": 0.0,
+          "shap_value": -0.009360289343512613
+        },
+        {
+          "feature": "home_ownership_MORTGAGE",
+          "feature_value": 1.0,
+          "shap_value": 0.00508599815506047
+        },
+        {
+          "feature": "grade_E",
+          "feature_value": 0.0,
+          "shap_value": 0.004341764691040816
+        },
+        {
+          "feature": "grade_D",
+          "feature_value": 0.0,
+          "shap_value": 0.003897816752051798
+        },
+        {
+          "feature": "grade_C",
+          "feature_value": 1.0,
+          "shap_value": -0.0036764223626339783
+        },
+        {
+          "feature": "verification_status_Verified",
+          "feature_value": 1.0,
+          "shap_value": -0.003523289192805566
+        },
+        {
+          "feature": "home_ownership_RENT",
+          "feature_value": 0.0,
+          "shap_value": 0.0028022583255324883
+        },
+        {
+          "feature": "grade_F",
+          "feature_value": 0.0,
+          "shap_value": 0.002733631672511193
+        },
+        {
+          "feature": "installment",
+          "feature_value": 0.22514829869439695,
+          "shap_value": 0.002578311088575166
+        },
+        {
+          "feature": "sub_grade_C2",
+          "feature_value": 1.0,
+          "shap_value": -0.0025277076087013278
+        },
+        {
+          "feature": "sub_grade_A4",
+          "feature_value": 0.0,
+          "shap_value": -0.001478596962994901
+        },
+        {
+          "feature": "sub_grade_A5",
+          "feature_value": 0.0,
+          "shap_value": -0.0013804511612239881
+        },
+        {
+          "feature": "employment_length_num",
+          "feature_value": 1.0,
+          "shap_value": -0.0011829548090438273
+        },
+        {
+          "feature": "verification_status_Source Verified",
+          "feature_value": 0.0,
+          "shap_value": 0.0010317031684158266
+        },
+        {
+          "feature": "address_state_CA",
+          "feature_value": 0.0,
+          "shap_value": -0.0009401552768145456
+        },
+        {
+          "feature": "sub_grade_C1",
+          "feature_value": 0.0,
+          "shap_value": -0.0009215113250346104
+        },
+        {
+          "feature": "sub_grade_B3",
+          "feature_value": 0.0,
+          "shap_value": -0.0008806493444496044
+        }
+      ]
+    }
+  }
+}
