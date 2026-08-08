@@ -1,0 +1,29 @@
+name: Temporary LendingClub Project Analysis
+on:
+  push:
+    branches: [tmp-pf-lendingclub-20260807]
+    paths-ignore:
+      - 'analysis_results/**'
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dependencies
+        run: pip install -q numpy pandas scikit-learn shap
+      - name: Run analysis
+        run: python remote_pf_analysis.py
+      - name: Commit compact analysis results
+        run: |
+          git config user.name 'OpenAI temporary analysis'
+          git config user.email 'actions@users.noreply.github.com'
+          git add analysis_results
+          git commit -m 'Temporary LendingClub analysis results' || exit 0
+          git push
